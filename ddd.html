@@ -1,0 +1,29 @@
+<template>
+  <div class="container-fluid p-0">
+    <img :src="homeImg" class="img-fluid w-100 h-40" alt="스즈메문단속">
+    <div class="container">
+      <!-- 여기에 다른 콘텐츠를 추가하세요 -->
+      <h5>최신글</h5>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name:'home',
+  data(){
+    return{
+      
+    }
+  },
+  props:{
+    homeImg:Image,
+  }
+}
+</script>
+
+<style>
+  .container {
+  margin-top: -150px;
+}
+</style>
