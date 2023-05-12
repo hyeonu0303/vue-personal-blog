@@ -1,12 +1,11 @@
 <template>
-  <div class="container col-7">
+  <div class="container col-7 mt-5">
     <!--파라미터를 다 가져옴 $route.params.작명한것-->
     <!-- {{$route.params.id}} -->
     <!--URL에있는 숫자를 넣으면됨-->
-    <h5>{{ detail[$route.params.id].title }}</h5>
-    <p style="white-space: pre-line">{{ detail[$route.params.id].content }}</p>
-    <p>{{ detail[$route.params.id].date }}</p>
-    <img :src="detail[$route.params.id].image">
+    <h5>{{ vueData[$route.params.id].title }}</h5>
+    <p style="white-space: pre-line">{{ vueData[$route.params.id].content }}</p>
+    <p>{{ vueData[$route.params.id].date }}</p>
     <hr>
   </div>
 </template>
@@ -20,7 +19,7 @@ export default {
     }
   },
   props:{
-    detail:Array,
+    vueData:Array,
   }
 }
 </script>

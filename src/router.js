@@ -1,30 +1,44 @@
 import { createWebHistory, createRouter } from "vue-router";
 
-//라이브러리명을 임포트해봄 createRouter->라우터형식 
-import List from './components/List.vue';
 import Home from './components/home.vue';
-import Detail from './components/detail.vue';
+import allPost from './components/allPost.vue';
+import vue_List from './components/vue/vueList.vue';
+import vue_Detail from './components/vue/vueDetail.vue';
+import jsList from './components/javascript/jsList.vue';
+import js_Detail from './components/javascript/jsDetail.vue';
+
 const routes = [
-  {
-    path: "/list",
-    component: List,
-  },
   {
     path: "/",
     component: Home,
   },
   {
-    //detail/아무문자 :작명(정규식문법 \\d+ <- 숫자)
-    //:id* 파라미터를 중복해라 vue-router4 참고
-    path: "/detail/:id(\\d+)",
-    component: Detail,
+    path: "/allPost",
+    component: allPost,
   },
-];
+  {
+    path: "/jslist",
+    component: jsList,
 
-//createRouter()안에 설정 집어넣으면 됨
+  },
+  {
+    path: "/detail/:id(\\d+)",
+    component: js_Detail, 
+  },
+  {
+    path: "/vuelist",
+    component: vue_List 
+  },
+  {
+    path: "/detail/:id(\\d+)",
+    component: vue_Detail 
+  },
+  ]
+
+
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
 
-export default router; 
+export default router;
