@@ -30,16 +30,7 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             목록
           </a>
-          <ul class="dropdown-menu">
-            <li>
-              <router-link to="/jslist" class="dropdown-item" >JavaScript</router-link>
-            </li>
-            <li><router-link to="/vuelist" class="dropdown-item">Vue</router-link></li>
-            <li><a class="dropdown-item" href="#">Svelte</a></li>
-            <li><a class="dropdown-item" href="#">Python</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <List/>
         </li>
       </ul>
       <form class="d-flex" role="search">
@@ -59,13 +50,15 @@
 </template>
 
 <script>
+import newPost from './assets/newPost.js';
+import List from './components/List.vue';
 import vueData from './assets/vueData.js';
 import jsData from './assets/jsData.js';
-import newPost from './assets/newPost.js';
-import wolfImage from '@/image/늑대아이3.png';
+import wolfImage from './image/늑대아이3.png';
 import zhangguImage from './image/짱구.png';
-import totoroImage from '@/image/토토로2.png';
+import totoroImage from './image/토토로2.png';
 export default {
+
   name: 'App',
   data() {
     return {
@@ -76,10 +69,12 @@ export default {
         wolfImage,
         zhangguImage,
         totoroImage,
-      ]
+      ],
+      category:[],
     }
   },
   components: {
+    List
   }
 }
 </script>

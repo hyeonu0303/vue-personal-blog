@@ -22,7 +22,7 @@ const routes = [
 
   },
   {
-    path: "/jsdetail/:id(\\d+)",
+    path: "/jsdetail/:js(\\d+)",
     component: jsDetail, 
   },
   {
@@ -30,7 +30,7 @@ const routes = [
     component: vueList 
   },
   {
-    path: "/vuedetail/:id(\\d+)",
+    path: "/vuedetail/:vue(\\d+)",
     component: vueDetail 
   },
   ]
