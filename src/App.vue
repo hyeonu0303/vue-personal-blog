@@ -31,14 +31,7 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             목록
           </a>
-          <ul class="dropdown-menu">
-            <li><router-link to="/jslist" class="dropdown-item">JavaScript</router-link></li>
-            <li><router-link to="/vuelist" class="dropdown-item">Vue</router-link></li>
-            <li><a class="dropdown-item" href="#">Svelte</a></li>
-            <li><a class="dropdown-item" href="#">Python</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <List/>
         </li>
         
       </ul>
@@ -61,15 +54,14 @@
 
 <script>
 import newPost from './assets/newPost.js';
-//Vue데이터 파일
+import List from './components/List.vue';
 import vueData from './assets/vueData.js';
-//JS데이터파일
 import jsData from './assets/jsData.js';
-//홈 이미지데이터
 import wolfImage from './image/homeImg/늑대아이3.png';
 import zhangguImage from './image/homeImg/짱구.png';
 import totoroImage from './image/homeImg/토토로2.png';
 export default {
+
   name: 'App',
   data() {
     return {
@@ -80,10 +72,12 @@ export default {
         wolfImage,
         zhangguImage,
         totoroImage,
-      ]
+      ],
+      category:[],
     }
   },
   components: {
+    List
   }
 }
 </script>
