@@ -2,10 +2,10 @@ import { createWebHistory, createRouter } from "vue-router";
 
 import Home from './components/home.vue';
 import allPost from './components/allPost.vue';
-import vue_List from './components/vue/vueList.vue';
-import vue_Detail from './components/vue/vueDetail.vue';
+import vueList from './components/vue/vueList.vue';
+import vueDetail from './components/vue/vueDetail.vue';
 import jsList from './components/javascript/jsList.vue';
-import js_Detail from './components/javascript/jsDetail.vue';
+import jsDetail from './components/javascript/jsDetail.vue';
 
 const routes = [
   {
@@ -13,7 +13,7 @@ const routes = [
     component: Home,
   },
   {
-    path: "/allPost",
+    path: "/allpost",
     component: allPost,
   },
   {
@@ -22,16 +22,16 @@ const routes = [
 
   },
   {
-    path: "/detail/:id(\\d+)",
-    component: js_Detail, 
+    path: "/jsdetail/:id(\\d+)",
+    component: jsDetail, 
   },
   {
     path: "/vuelist",
-    component: vue_List 
+    component: vueList 
   },
   {
-    path: "/detail/:id(\\d+)",
-    component: vue_Detail 
+    path: "/vuedetail/:id(\\d+)",
+    component: vueDetail 
   },
   ]
 

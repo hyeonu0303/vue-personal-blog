@@ -42,7 +42,7 @@
   <br>
   <h2>최신글</h2>
   <!--향후 데이터가 늘어나면 추가할예정-->
-  <AllPost :newPost="newPost.slice(0,blogDataCount)"/>
+  <AllPost :newPost="newPost"/>
 </div>
 </template>
 

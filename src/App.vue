@@ -5,9 +5,8 @@
   3.검색기능 활성화하기
   4.목록에 개발일지 추가하기
   5.모바일로 들어왔을때 이미지, 폰트크기등 조절하기
-  6.List에다가 데이터를 한번에 넣는게 더 편할거같은데?????
+  
 -->
-
 <template>
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -22,7 +21,7 @@
           <router-link to="/" class="nav-link active">홈</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/allPost" class="nav-link active">한눈에보기</router-link>
+          <router-link to="/allpost" class="nav-link active">한눈에보기</router-link>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">소개</a>
@@ -32,7 +31,9 @@
             목록
           </a>
           <ul class="dropdown-menu">
-            <li><router-link to="/jslist" class="dropdown-item">JavaScript</router-link></li>
+            <li>
+              <router-link to="/jslist" class="dropdown-item" >JavaScript</router-link>
+            </li>
             <li><router-link to="/vuelist" class="dropdown-item">Vue</router-link></li>
             <li><a class="dropdown-item" href="#">Svelte</a></li>
             <li><a class="dropdown-item" href="#">Python</a></li>
@@ -40,7 +41,6 @@
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
-        
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -49,33 +49,29 @@
     </div>
   </div>
 </nav>
-
   <router-view 
-    :newPost="newPost" 
+    :newPost="newPost"
     :vueData="vueData"
-    :homeImg="homeImg"
     :jsData="jsData"
+    :homeImg="homeImg"
   >
   </router-view>
 </template>
 
 <script>
-import newPost from './assets/newPost.js';
-//Vue데이터 파일
 import vueData from './assets/vueData.js';
-//JS데이터파일
 import jsData from './assets/jsData.js';
-//홈 이미지데이터
-import wolfImage from './image/homeImg/늑대아이3.png';
-import zhangguImage from './image/homeImg/짱구.png';
-import totoroImage from './image/homeImg/토토로2.png';
+import newPost from './assets/newPost.js';
+import wolfImage from '@/image/늑대아이3.png';
+import zhangguImage from './image/짱구.png';
+import totoroImage from '@/image/토토로2.png';
 export default {
   name: 'App',
   data() {
     return {
       newPost: newPost,
-      jsData : jsData,
       vueData: vueData,
+      jsData: jsData,
       homeImg: [
         wolfImage,
         zhangguImage,
