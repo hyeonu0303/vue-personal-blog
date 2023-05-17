@@ -2,10 +2,10 @@ import { createWebHistory, createRouter } from "vue-router";
 
 import Home from './components/home.vue';
 import allPost from './components/allPost.vue';
-import vueList from './components/vue/vueList.vue';
-import vueDetail from './components/vue/vueDetail.vue';
-import jsList from './components/javascript/jsList.vue';
-import jsDetail from './components/javascript/jsDetail.vue';
+import vueList from './views/vue/vueList.vue';
+import vueDetail from './views/vue/vueDetail.vue';
+import jsList from './views/javascript/jsList.vue';
+import jsDetail from './views/javascript/jsDetail.vue';
 //변수list -> 변수detail
 //
 

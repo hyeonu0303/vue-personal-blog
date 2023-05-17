@@ -25,7 +25,7 @@
           <router-link to="/allPost" class="nav-link active">한눈에보기</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">소개</a>
+          <router-link to="/introduce" class="nav-link active">자기소개</router-link>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,13 +53,14 @@
 </template>
 
 <script>
+
 import newPost from './assets/newPost.js';
 import List from './components/List.vue';
 import vueData from './assets/vueData.js';
 import jsData from './assets/jsData.js';
-import wolfImage from './image/homeImg/늑대아이3.png';
-import zhangguImage from './image/homeImg/짱구.png';
-import totoroImage from './image/homeImg/토토로2.png';
+import wolfImage from './image/늑대아이3.png';
+import zhangguImage from './image/짱구.png';
+import totoroImage from './image/토토로2.png';
 export default {
 
   name: 'App',
@@ -73,7 +74,6 @@ export default {
         zhangguImage,
         totoroImage,
       ],
-      category:[],
     }
   },
   components: {

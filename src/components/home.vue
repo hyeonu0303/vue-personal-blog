@@ -3,12 +3,14 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <!--이미지 2000X1150-->
-      <div class="quote-box">
-        <p>가는거니?<br>
-          난 아직 너에게 아무것도
-          해준게 없어...
-        </p>
-        </div>
+      <transition name="fade">
+        <div class="quote-box">
+          <p>가는거니?<br>
+            난 아직 너에게 아무것도
+            해준게 없어...
+          </p>
+          </div>
+      </transition>
         <img :src="homeImg[0]" class="d-block w-100" s tyle="max-height:1150px;" alt="...">
         
     </div>
@@ -42,7 +44,7 @@
   <br>
   <h2>최신글</h2>
   <!--향후 데이터가 늘어나면 추가할예정-->
-  <AllPost :newPost="newPost.slice(0,blogDataCount)"/>
+  <AllPost :newPost="newPost.slice(0,3)"/>
 </div>
 </template>
 
@@ -66,7 +68,7 @@ export default {
 
   },
   computed:{
-    blogDataCount(){
+    newPostDataCount(){
       return this.newPost.length;
     }
   }
@@ -77,7 +79,6 @@ export default {
 .carousel-item {
   position: relative;
 }
-
 
 .carousel-item .quote-box {
   position: absolute;
@@ -113,6 +114,10 @@ export default {
     font-size: 15px;
   }
 }
+
+.fade-enter-from{opacity: 0;}
+.fade-enter-active{transition:all 1s;}
+.fade-enter-to{opacity: 1;}
 
 
 

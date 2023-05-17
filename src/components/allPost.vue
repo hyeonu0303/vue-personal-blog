@@ -1,7 +1,10 @@
 <template>
   <div class="container mt-5">
-    <h4>{{ newPost[0].title}}</h4>
-    <p>{{ newPost[0].subTitle}}</p>
+    <div class="mt-2" v-for="(item,index) in newPost" :key="index">
+      <h4>{{ newPost[index].title}}</h4>
+      <p>{{ newPost[index].subTitle}}</p>
+      <hr>
+    </div>
   </div>
 </template>
 

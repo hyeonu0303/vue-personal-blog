@@ -15,4 +15,10 @@ export default[{
   content:'Vue에서 for문은 v-for="(a,i) in 3" :key="i"\n이런식으로 사용한다.',
   date:'2023,05.03',
   number:1,
+},{
+  title:'[Vue] v-for문법을 쓰는방법',
+  subTitle:'props를 사용해서 부모의 데이터를 받는법을 알아봅시다.',
+  content:'Vue에서 for문은 v-for="(a,i) in 3" :key="i"\n이런식으로 사용한다.',
+  date:'2023,05.16',
+  number:1,
 }]
