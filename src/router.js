@@ -6,6 +6,8 @@ import vueList from './views/vue/vueList.vue';
 import vueDetail from './views/vue/vueDetail.vue';
 import jsList from './views/javascript/jsList.vue';
 import jsDetail from './views/javascript/jsDetail.vue';
+import devList from './views/developeDay/devList.vue';
+import devDetail from './views/developeDay/devDetail.vue';
 //변수list -> 변수detail
 //
 
@@ -36,6 +38,14 @@ const routes = [
   {
     path:"/vuedetail/:vue",
     component:vueDetail,
+  },
+  {
+    path:"/devlist",
+    component: devList,
+  },
+  {
+    path:"/devdetail/:dev",
+    component:devDetail
   }
 ]
 

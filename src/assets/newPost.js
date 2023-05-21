@@ -1,7 +1,8 @@
 import vueData from './vueData.js';
 import jsData from './jsData.js';
+import develope from './develope.js';
 
-var allData = [...vueData, ...jsData];
+var allData = [...vueData, ...jsData,...develope];
 
 allData = allData.sort((a, b) => {
   // 날짜 문자열을 'YYYY,MM.DD'에서 'YYYY-MM-DD' 형식으로 변환

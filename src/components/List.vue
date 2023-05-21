@@ -3,10 +3,7 @@
     <ul class="dropdown-menu">
       <li><router-link to="/jslist" class="dropdown-item">JavaScript</router-link></li>
       <li><router-link to="/vuelist" class="dropdown-item">Vue</router-link></li>
-      <li><a class="dropdown-item" href="#">Svelte</a></li>
-      <li><a class="dropdown-item" href="#">Python</a></li>
-      <li><hr class="dropdown-divider"></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <li><router-link to="/devlist" class="dropdown-item">개발일지</router-link></li>
     </ul>
 </template>
 
