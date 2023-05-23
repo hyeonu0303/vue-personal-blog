@@ -1,8 +1,10 @@
 <template>
   <div class="container mt-5">
     <div v-for="(post, index) in vueData" :key="index">
-      <h5><router-link :to="'vuedetail/' + index" class="blog-link">{{ post.title }}</router-link></h5>
-      <p>{{ post.content }}</p>
+      <router-link :to="'vuedetail/' + index" class="blog-link">
+        <h5>{{ post.title }}</h5>
+        <p>{{ post.subtitle }}</p>
+      </router-link>
       <p>{{ post.date }}</p>
       <hr>
     </div>
@@ -26,13 +28,5 @@ export default {
 </script>
 
 <style>
-  .blog-link {
-  color: black;
-  text-decoration: none;
-  transition: transform 0.2s ease-out;
-}
-
-.blog-link:hover {
-  transform: translateY(-3px);
-}
+  
 </style>

@@ -1,8 +1,10 @@
 <template>
   <div class="container mt-5">
     <div v-for="(post, index) in devData" :key="index">
-      <h5><router-link  :to="'devdetail/' + index" class="blog-link">{{ post.title }}</router-link></h5>
-      <p>{{ post.subTitle }}</p>
+      <router-link  :to="'devdetail/' + index" class="blog-link">
+        <h5>{{ post.title }}</h5>
+        <p>{{ post.subtitle }}</p>
+      </router-link>
       <p style="font-size:15px">{{ post.date }}</p>
       <hr>
     </div>

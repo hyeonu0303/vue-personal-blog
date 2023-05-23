@@ -2,9 +2,11 @@
   <div>
     <div class="container mt-5">
     <div v-for="(post, index) in jsData" :key="index">
-      <h5><router-link :to="'jsdetail/' + index">{{ post.title }}</router-link></h5>
-      <p>{{ post.content }}</p>
-      <p>{{ post.date }}</p>
+      <router-link :to="'jsdetail/' + index" class="blog-link">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.subtitle}}</p>
+      </router-link>
+      <p style="font-size:16px;">{{ post.date }}</p>
       <hr>
     </div>
   </div>
