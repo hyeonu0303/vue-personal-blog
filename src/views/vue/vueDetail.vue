@@ -1,5 +1,5 @@
 <template>
-  <div class="container col-7 mt-5">
+  <div class="container mt-5">
     <!--파라미터를 다 가져옴 $route.params.작명한것-->
     <!-- {{$route.params.id}} -->
     <!--URL에있는 숫자를 넣으면됨-->

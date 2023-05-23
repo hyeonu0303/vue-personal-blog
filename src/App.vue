@@ -24,7 +24,7 @@
           <router-link to="/allpost" class="nav-link active">한눈에보기</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">소개</a>
+          <router-link to="/introduce" class="nav-link active">자기소개</router-link>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,19 +44,34 @@
     :newPost="newPost"
     :vueData="vueData"
     :jsData="jsData"
+<<<<<<< HEAD
     :homeImg="homeImg"
+=======
+    :devData="devData"
+>>>>>>> test
   >
   </router-view>
 </template>
 
 <script>
+
+//데이터
 import newPost from './assets/newPost.js';
 import List from './components/List.vue';
 import vueData from './assets/vueData.js';
 import jsData from './assets/jsData.js';
+<<<<<<< HEAD
 import wolfImage from './image/늑대아이3.png';
 import zhangguImage from './image/짱구.png';
 import totoroImage from './image/토토로2.png';
+=======
+import devData from './assets/develope.js';
+//이미지
+import wolfImage from './image/늑대아이3.png';
+import zhangguImage from './image/짱구.png';
+import totoroImage from './image/토토로2.png';
+
+>>>>>>> test
 export default {
 
   name: 'App',
@@ -64,13 +79,16 @@ export default {
     return {
       newPost: newPost,
       vueData: vueData,
+<<<<<<< HEAD
       jsData: jsData,
+=======
+      devData: devData,
+>>>>>>> test
       homeImg: [
         wolfImage,
         zhangguImage,
         totoroImage,
       ],
-      category:[],
     }
   },
   components: {
@@ -80,5 +98,12 @@ export default {
 </script>
 
 <style>
-  
+/* @font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+
 </style>

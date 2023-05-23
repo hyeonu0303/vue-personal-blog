@@ -3,12 +3,14 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <!--이미지 2000X1150-->
-      <div class="quote-box">
-        <p>가는거니?<br>
-          난 아직 너에게 아무것도
-          해준게 없어...
-        </p>
-        </div>
+      <transition name="fade">
+        <div class="quote-box">
+          <p>가는거니?<br>
+            난 아직 너에게 아무것도
+            해준게 없어...
+          </p>
+          </div>
+      </transition>
         <img :src="homeImg[0]" class="d-block w-100" s tyle="max-height:1150px;" alt="...">
         
     </div>
@@ -42,7 +44,11 @@
   <br>
   <h2>최신글</h2>
   <!--향후 데이터가 늘어나면 추가할예정-->
+<<<<<<< HEAD
   <AllPost :newPost="newPost"/>
+=======
+  <AllPost :newPost="newPost.slice(0,3)"/>
+>>>>>>> test
 </div>
 </template>
 
@@ -66,7 +72,7 @@ export default {
 
   },
   computed:{
-    blogDataCount(){
+    newPostDataCount(){
       return this.newPost.length;
     }
   }
@@ -77,7 +83,6 @@ export default {
 .carousel-item {
   position: relative;
 }
-
 
 .carousel-item .quote-box {
   position: absolute;
@@ -114,6 +119,21 @@ export default {
   }
 }
 
+.fade-enter-from{opacity: 0;}
+.fade-enter-active{transition:all 1s;}
+.fade-enter-to{opacity: 1;}
+
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+  font-family: 'SUITE-Regular';
+  font-size:20px;
+}
 
 
 </style>
