@@ -25,7 +25,7 @@
           <router-link to="/allPost" class="nav-link active">한눈에보기</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/introduce" class="nav-link active">자기소개</router-link>
+          <router-link to="/" class="nav-link active">소개</router-link>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,13 +33,11 @@
           </a>
           <List/>
         </li>
-        
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
+  </div>
+  <div>
+    <i class="bi bi-arrow-up-circle-fill primary"></i>
   </div>
 </nav>
 

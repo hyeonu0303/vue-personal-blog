@@ -9,7 +9,9 @@ export default[{
 {
   title:'[JS] for문법을 쓰는방법',
   subtitle:'JavaScript에서 for문을 배워봅시다.',
-  content:`JS에서 for문을 쓰는방법은 간단합니다`,
+  content:`
+  JS에서 for문을 쓰는방법은 간단합니다
+  `,
   date:'2023.05.14',
   link:'jsdetail',
   number:1,
