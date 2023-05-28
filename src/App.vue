@@ -1,18 +1,8 @@
-<!--
-  1.데이터처리를 어떻게할건지 블로그에대한 새로운 글을 쓸때,
-    제목하고 부제는 
-  2.Vue부분은 Vue부분만 보이게하기
-  3.검색기능 활성화하기
-  4.목록에 개발일지 추가하기
-  5.모바일로 들어왔을때 이미지, 폰트크기등 조절하기
-  6.List에다가 데이터를 한번에 넣는게 더 편할거같은데?????
--->
-
 <template>
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg navbar-fixed-top bg-body-tertiary">
   <div class="container-fluid">
-    <router-link to="/" class="navbar-brand">혀누 Blog</router-link>
+    <router-link to="/" class="navbar-brand" style="font-weight: bold;">HY.blog</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,22 +19,19 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            목록
+            develope  
           </a>
-          <List/>
-        </li>
-      </ul>
+        <List/>
+      </li>
+    </ul>
+    <font-awesome-icon :icon="['fass', 'moon']" class="moon"/>
     </div>
   </div>
-  <div>
-    <i class="bi bi-arrow-up-circle-fill primary"></i>
-  </div>
 </nav>
-
   <router-view 
+    :homeImg="homeImg"
     :newPost="newPost" 
     :vueData="vueData"
-    :homeImg="homeImg"
     :jsData="jsData"
     :devData="devData"
   >
@@ -60,10 +47,7 @@ import vueData from './assets/vueData.js';
 import jsData from './assets/jsData.js';
 import devData from './assets/develope.js';
 //이미지
-import wolfImage from './image/늑대아이3.png';
-import zhangguImage from './image/짱구.png';
-import totoroImage from './image/토토로2.png';
-
+import homeImg from './image/homeImg.jpg';
 export default {
 
   name: 'App',
@@ -73,26 +57,37 @@ export default {
       jsData : jsData,
       vueData: vueData,
       devData: devData,
-      homeImg: [
-        wolfImage,
-        zhangguImage,
-        totoroImage,
-      ],
+      homeImg: homeImg,
     }
   },
   components: {
-    List
+    List,
+  },
+  conputed:{
+
   }
 }
 </script>
 
 <style>
-/* @font-face {
-    font-family: 'omyu_pretty';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+/*dropdown nav hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.moon{
+  margin-right:20px;
+  font-size:30px;
+}
+
+.navbar{
+  z-index: 1000;
+}
+
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-} */
-
+}
 
 </style>

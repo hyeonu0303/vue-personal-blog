@@ -3,8 +3,16 @@ import App from './App.vue'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 라우터만든거 from './router.js'
+//fontawesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+library.add(fas)
 
-createApp(App).use(라우터만든거).mount('#app')
+const app=createApp(App)
+app.component('font-awesome-icon',FontAwesomeIcon) 
+app.use(라우터만든거)
+app.mount('#app')
 
 
 /*
