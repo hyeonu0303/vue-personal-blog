@@ -14,7 +14,7 @@ export default[{
   완성해보자!!😊 
   `,
   date:'2023.05.23',
-  link:'devdetail',
+  link:'devdetail/0',
   number:1,
 },]
 

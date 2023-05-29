@@ -11,8 +11,6 @@ allData = allData.sort((a, b) => {
   
   return dateB - dateA;  // 최신 날짜순으로 정렬
 });
-
-console.log(allData);
 export default allData;
 
 

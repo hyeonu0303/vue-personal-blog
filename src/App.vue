@@ -1,3 +1,9 @@
+<!--
+  포스트 제목은 h5로 설정한다.
+  font-size
+-->
+
+
 <template>
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-fixed-top bg-body-tertiary">
@@ -37,7 +43,6 @@
   >
   </router-view>
 </template>
-
 <script>
 
 //데이터
@@ -72,7 +77,7 @@ export default {
 <style>
 /*dropdown nav hover */
 .dropdown:hover .dropdown-menu {
-    display: block;
+  display: block;
 }
 .moon{
   margin-right:20px;
@@ -84,10 +89,10 @@ export default {
 }
 
 @font-face {
-    font-family: 'Yeongdo-Rg';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Yeongdo-Rg';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 </style>

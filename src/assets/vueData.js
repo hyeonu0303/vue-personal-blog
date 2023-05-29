@@ -8,20 +8,20 @@ export default[{
           아직 checkModal은 false여서, 함수를 사용해 이벤트가 발생할때 
           checkModal을 true로 바꿔주면 div가 안에 내용이 보이게 되는것이다.`,
   date:'2023.05.02',
-  link:'vuedetail',
+  link:'vuedetail/0',
   number:0,
 },{
   title:'[Vue] v-for문법을 쓰는방법',
   subtitle:'props를 사용해서 부모의 데이터를 받는법을 알아봅시다.',
   content:'Vue에서 for문은 v-for="(a,i) in 3" :key="i"\n이런식으로 사용한다.',
   date:'2023,05.03',
-  link:'vuedetail',
+  link:'vuedetail/1',
   number:1,
 },{
   title:'[Vue] v-for문법을 쓰는방법',
   subtitle:'props를 사용해서 부모의 데이터를 받는법을 알아봅시다.',
   content:'Vue에서 for문은 v-for="(a,i) in 3" :key="i"\n이런식으로 사용한다.',
   date:'2023,05.16',
-  link:'vuedetail',
+  link:'vuedetail/2',
   number:1,
 }]
