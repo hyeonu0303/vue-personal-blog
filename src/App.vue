@@ -1,10 +1,15 @@
 <!--
-  포스트 제목은 h5로 설정한다.
-  font-size
+  1.디자인 시스템구축의 필요성느낌 컴포넌트들을 어떻게 할지
+  2.다크모드추가
+  3.태그추가
+  4.font 모바일 바꿔야함
+  5.소개부분작성
+  6.아이콘에 router-link 달아야함
 -->
 
 
 <template>
+  
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-fixed-top bg-body-tertiary">
   <div class="container-fluid">
@@ -30,7 +35,7 @@
         <List/>
       </li>
     </ul>
-    <font-awesome-icon :icon="['fass', 'moon']" class="moon"/>
+    <font-awesome-icon v-on:click="modeChange" :icon="['fass', 'moon']" class="moon"/>
     </div>
   </div>
 </nav>
@@ -40,6 +45,7 @@
     :vueData="vueData"
     :jsData="jsData"
     :devData="devData"
+    :cssData="cssData"
   >
   </router-view>
 </template>
@@ -51,6 +57,7 @@ import List from './components/List.vue';
 import vueData from './assets/vueData.js';
 import jsData from './assets/jsData.js';
 import devData from './assets/develope.js';
+import cssData from './assets/css.js';
 //이미지
 import homeImg from './image/homeImg.jpg';
 export default {
@@ -62,6 +69,7 @@ export default {
       jsData : jsData,
       vueData: vueData,
       devData: devData,
+      cssData: cssData,
       homeImg: homeImg,
     }
   },
@@ -70,7 +78,26 @@ export default {
   },
   conputed:{
 
+  },
+  methods:{
+    modeChange(){
+      
+    }
   }
+  //향후 progress-bar추가하기위한 로직
+  /* methods:{
+    handleScroll() {
+  // 스크롤 이벤트 처리 로직 작성
+      console.log('스크롤 이벤트가 발생했습니다.');
+      console.log('스크롤 위치:', window.scrollY);
+  }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }, */
 }
 </script>
 
