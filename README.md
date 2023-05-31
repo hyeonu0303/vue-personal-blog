@@ -3,6 +3,10 @@
 ## Project setup
 ```
 npm install
+npm i bootstrap@5.3.0
+npm install fontawesome
+npm install mitt
+npm install marked
 ```
 
 ### Compiles and hot-reloads for development
@@ -14,6 +18,7 @@ npm run serve
 ```
 npm run build
 ```
+
 
 ### Lints and fixes files
 ```
