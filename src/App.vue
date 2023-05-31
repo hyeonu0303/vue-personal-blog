@@ -1,29 +1,29 @@
 <template>
   
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-fixed-top bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg navbar-fixed-top" :class="{'bg-dark':modeCheck,'text-white':modeCheck}">
   <div class="container-fluid">
-    <router-link to="/" class="navbar-brand" style="font-weight: bold;">HY.blog</router-link>
+    <router-link to="/" class="navbar-brand" style="font-weight: bold;" :class="{'text-white':modeCheck}">HY.blog</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <router-link to="/" class="nav-link active">홈</router-link>
+          <router-link to="/" class="nav-link active" :class="{'text-white':modeCheck}">홈</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/allPost" class="nav-link active">한눈에보기</router-link>
+          <router-link to="/allPost" class="nav-link active" :class="{'text-white':modeCheck}">한눈에보기</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/" class="nav-link active">소개</router-link>
+          <router-link to="/" class="nav-link active" :class="{'text-white':modeCheck}">소개</router-link>
         </li>
         
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" :class="{'text-white':modeCheck}">
             develope  
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu" :class="{'dropdown-menu-dark': modeCheck}">
             <List/>
           </ul>
       </li>
@@ -89,12 +89,11 @@ export default {
     modeChange(){
       if(this.count % 2 == 1){
         this.modeCheck = true;
-        this.count++;
       }
       else{
         this.modeCheck = false;
-        this.count++;
       }
+      this.count++;
     }
   }
   //향후 progress-bar추가하기위한 로직
