@@ -50,6 +50,8 @@
     :jsData="jsData"
     :devData="devData"
     :cssData="cssData"
+    :modeCheck="modeCheck"
+    :count="count"
   >
   </router-view>
 </template>

@@ -1,66 +1,66 @@
 <template>
-  <div class="main-background">
+  <div class="main-background" :class="{'bg-dark':modeCheck}">
     <div class="mainImg">
       <img :src="homeImg" class="w-100 h-100"/> 
     </div>
-    <div class="content mt-5 allpost">
+    <div class="content mt-5 allpost" :class="{'bg-dark':modeCheck}">
       <!--Card부분-->
       <div class="container card-container">
         <!--vue Icon-->
-        <h2 class="mt-5">카테고리 <font-awesome-icon :icon="['fas', 'code']" style="color: #0048ff;"/></h2>
+        <h2 class="mt-5" :class="{'text-white':modeCheck}">카테고리 <font-awesome-icon :icon="['fas', 'code']" style="color: #0048ff;"/></h2>
         <div class="row mt-3">
           <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box">
-            <router-link to="/vuelist">
-              <div class="card card-iconBox card-shadow">
+            <router-link to="/vuelist" class="text-decoration-none">
+              <div class="card card-iconBox card-shadow" :class="{'card-dark':modeCheck}">
                 <div class="card-iconBox-inner mt-3">
                   <img
                     src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1568683636/noticon/hkuhbyocl2mx2keas7ng.png"
                     class="card-img-top" alt="vue아이콘" />
                 </div>
                 <div class="card-body p-0 mt-3">
-                  <p style="text-align:center; font-weight: bold;">Vue</p>
+                  <p style="text-align:center; font-weight: bold;" :class="{'text-white':modeCheck}">Vue</p>
                 </div>
               </div>
             </router-link>
           </div>
           <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box">
-            <router-link to="/jslist">
-              <div class="card card-iconBox card-shadow">
+            <router-link to="/jslist" class="text-decoration-none">
+              <div class="card card-iconBox card-shadow" :class="{'card-dark':modeCheck}">
                 <div class="card-iconBox-inner-js mt-3">
                   <img
                     src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1567008394/noticon/ohybolu4ensol1gzqas1.png"
                     class="card-img-top" alt="JS아이콘" />
                 </div>
                 <div class="card-body p-0 mt-3">
-                  <p style="text-align:center; font-weight: bold;">JavaScript</p>
+                  <p style="text-align:center; font-weight: bold;" :class="{'text-white':modeCheck}">JavaScript</p>
                 </div>
               </div>
             </router-link>
           </div>
           <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box">
-            <router-link to="/csslist">
-              <div class="card card-iconBox card-shadow ">
+            <router-link to="/csslist" class="text-decoration-none">
+              <div class="card card-iconBox card-shadow " :class="{'card-dark':modeCheck}">
                 <div class="card-iconBox-inner-js mt-3">
                 <img
                   src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1678672480/noticon/qblxu9uo0uuitucuzhjy.png"
                   class="card-img-top" alt="CSS" />
               </div>
               <div class="card-body p-0 mt-3">
-                <p style="text-align:center; font-weight: bold;">CSS</p>
+                <p style="text-align:center; font-weight: bold;" :class="{'text-white':modeCheck}">CSS</p>
               </div>
             </div>
           </router-link>
           </div>
           <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box">
-            <router-link to="/devlist">
-              <div class="card card-iconBox card-shadow">
+            <router-link to="/devlist" class="text-decoration-none">
+              <div class="card card-iconBox card-shadow" :class="{'card-dark':modeCheck}">
                 <div class="card-iconBox-inner-js mt-3">
                   <img
                     src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1567001196/noticon/aziehs8hf3w3kwinelzf.png"
                     class="card-img-top" alt="개발일지아이콘" />
                 </div>
                 <div class="card-body p-0 mt-3">
-                  <p style="text-align:center; font-weight: bold;">개발 일지</p>
+                  <p style="text-align:center; font-weight: bold;" :class="{'text-white':modeCheck}">개발 일지</p>
                 </div>
               </div>
             </router-link>
@@ -69,10 +69,13 @@
         <hr>
       </div>
       <!--최신글-->
-      <h2 class="container mb-0">
+      <h2 class="container mb-0" :class="{'text-white':modeCheck}">
         최신 글 <font-awesome-icon :icon="['fas', 'star']" style="color: #f3fa39ea;" />
       </h2>
-      <AllPost :newPost="newPost.slice(0, 6)" />
+      <AllPost 
+      :newPost="newPost.slice(0, 6)" 
+      :count="count"
+      :modeCheck="modeCheck"/>
     </div>
   </div>
 </template>
@@ -89,10 +92,10 @@ export default {
   },
   props: {
     newPost: Array,
-    homeImg: Image,
-    // count:Number,
-    // modeCheck: Boolean,
-    // modeChange:Function,
+    homeImg: String,
+    count:Number,
+    modeCheck: Boolean,
+    modeChange:Function,
 
   },
   components: {
@@ -182,9 +185,13 @@ body {
 
 .card-shadow:hover {
   border: none;
-  background: #eeeeeed7;
   box-shadow: -3px -3px 30px 3px #5a5a5a, 3px 3px 30px 3px #3232FF;
   transition: all 0.5s;
+  color:black;
+}
+/*카드내부 다크모드변경 */
+.card-dark{
+  background:#2d2d2d;
 }
 
 
