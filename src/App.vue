@@ -1,4 +1,5 @@
 <template>
+  
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-fixed-top bg-body-tertiary">
   <div class="container-fluid">
@@ -17,11 +18,14 @@
         <li class="nav-item">
           <router-link to="/" class="nav-link active">소개</router-link>
         </li>
+        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             develope  
           </a>
-        <List/>
+          <ul class="dropdown-menu">
+            <List/>
+          </ul>
       </li>
     </ul>
     <font-awesome-icon 
