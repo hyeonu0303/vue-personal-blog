@@ -1,11 +1,8 @@
 <template>
-  <div class="container card-container">
+  <div class="container card-container pt-0">
     <!--최신글-->
     <div class="row newpost">
-      <h2 class="mt-3">
-        최신 글 <font-awesome-icon :icon="['fas', 'star']" style="color: #f3fa39ea;" />
-      </h2>
-      <div class=" col-sm-12 col-md-6 col-lg-4 mt-4" v-for="(item,index) in newPost" :key="index" >
+      <div class=" col-sm-12 col-md-6 col-lg-4 mt-3" v-for="(item,index) in newPost" :key="index" >
         <div class="card card-post card-shadow" >
           <div class="card-body">
             <router-link :to="`/${item.link}/` " class="text-decoration-none text-dark" >

@@ -1,9 +1,3 @@
-<!--
-  포스트 제목은 h5로 설정한다.
-  font-size
--->
-
-
 <template>
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-fixed-top bg-body-tertiary">
@@ -30,7 +24,18 @@
         <List/>
       </li>
     </ul>
-    <font-awesome-icon :icon="['fass', 'moon']" class="moon"/>
+    <font-awesome-icon 
+      v-on:click="modeChange" 
+      v-if="modeCheck == false" 
+      :icon="['fass', 'moon']"
+      size="xl" 
+      class="font-icon"/>
+    <font-awesome-icon 
+      v-on:click="modeChange" 
+      v-if="modeCheck == true" 
+      class="font-icon" 
+      size="xl"
+      :icon="['fas', 'sun']"/>
     </div>
   </div>
 </nav>
@@ -40,6 +45,7 @@
     :vueData="vueData"
     :jsData="jsData"
     :devData="devData"
+    :cssData="cssData"
   >
   </router-view>
 </template>
@@ -51,6 +57,7 @@ import List from './components/List.vue';
 import vueData from './assets/vueData.js';
 import jsData from './assets/jsData.js';
 import devData from './assets/develope.js';
+import cssData from './assets/css.js';
 //이미지
 import homeImg from './image/homeImg.jpg';
 export default {
@@ -62,7 +69,10 @@ export default {
       jsData : jsData,
       vueData: vueData,
       devData: devData,
+      cssData: cssData,
       homeImg: homeImg,
+      modeCheck:false,
+      count:0
     }
   },
   components: {
@@ -70,7 +80,33 @@ export default {
   },
   conputed:{
 
+  },
+  methods:{
+    modeChange(){
+      if(this.count % 2 == 1){
+        this.modeCheck = true;
+        this.count++;
+      }
+      else{
+        this.modeCheck = false;
+        this.count++;
+      }
+    }
   }
+  //향후 progress-bar추가하기위한 로직
+  /* methods:{
+    handleScroll() {
+  // 스크롤 이벤트 처리 로직 작성
+      console.log('스크롤 이벤트가 발생했습니다.');
+      console.log('스크롤 위치:', window.scrollY);
+  }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }, */
 }
 </script>
 
