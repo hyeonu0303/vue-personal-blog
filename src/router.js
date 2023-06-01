@@ -12,7 +12,6 @@ import cssDetail from './views/CSS/cssDetail.vue';
 //변수list -> 변수detail
 //
 
-
 const routes = [
   {
     path: "/",
@@ -63,5 +62,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+
 
 export default router;

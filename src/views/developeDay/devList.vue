@@ -1,12 +1,12 @@
 <template>
-  <div class="container mt-5">
+  <div class="container mt-5 min-vh-100">
     <div v-for="(post, index) in devData" :key="index">
       <router-link  :to="'devdetail/' + index" class="blog-link">
-        <h5>{{ post.title }}</h5>
-        <p>{{ post.subtitle }}</p>
+        <h5 :class="{'text-white':modeCheck}">{{ post.title }}</h5>
+        <p :class="{'text-white':modeCheck}">{{ post.subtitle }}</p>
       </router-link>
-      <p style="font-size:15px">{{ post.date }}</p>
-      <hr>
+      <p :class="{'text-white':modeCheck}" style="font-size:15px">{{ post.date }}</p>
+      <hr :class="{'text-white':modeCheck}">
     </div>
   </div>
 </template>
@@ -19,7 +19,8 @@ export default {
     }
   },
   props : {
-    devData:Array
+    devData:Array,
+    modeCheck:Boolean
   }
 }
 </script>

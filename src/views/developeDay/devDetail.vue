@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5">
+  <div class="container mt-5 min-vh-100">
     <h5>{{ devData[$route.params.dev].title }}</h5>
     <div v-html="markedContent"></div>
     <p>{{ devData[$route.params.dev].date }}</p>

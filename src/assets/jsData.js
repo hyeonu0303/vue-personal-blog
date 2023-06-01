@@ -1,7 +1,9 @@
 export default[{
   title:'[JS] if문법을 쓰는방법',
   subtitle:'javascript에서 if문을 배워봅시다.',
-  content:`JS에서 if문을 쓰는방법은 간단합니다`,
+  content:`JS에서 if문을 쓰는방법은 간단합니다
+  
+  `,
   date:'2023.05.12',
   link:'jsdetail/0',
   number:0,

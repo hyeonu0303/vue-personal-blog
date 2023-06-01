@@ -95,8 +95,6 @@ export default {
     homeImg: String,
     count:Number,
     modeCheck: Boolean,
-    modeChange:Function,
-
   },
   components: {
     AllPost,
@@ -130,9 +128,7 @@ body {
   font-size: 20px;
 }
 
-.allpost {
-  height: 1000px;
-}
+
 
 .main-background {
   margin-bottom: 0;

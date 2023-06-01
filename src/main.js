@@ -2,18 +2,37 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import 라우터만든거 from './router.js'
+import router from './router.js'
 //fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(fas)
+//mitt
+import mitt from 'mitt'
+let emitter = mitt()
+//prismjs
 
+import Prism from 'prismjs';
+import 'prismjs/themes/prism.css';
+
+
+//marked
+import {marked} from 'marked';
+
+marked.setOptions({
+  mangle: false, // mangle 경고 해제
+  headerIds: false, // headerIds 경고 해제
+})
+// 전역 디렉티브 등록
+//marked
 const app=createApp(App)
 app.component('font-awesome-icon',FontAwesomeIcon) 
-app.use(라우터만든거)
+app.use(router)
+app.config.globalProperties.$Prism = Prism;
+app.config.globalProperties.$marked = marked;
+app.config.globalProperties.emitter = emitter;
 app.mount('#app')
-
 
 /*
 marked사용법

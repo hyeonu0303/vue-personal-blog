@@ -1,8 +1,9 @@
 <template>
-  <div class="container card-container pt-0" :class="{'bg-dark': modeCheck}">
+<div :class="{'bg-dark': modeCheck}" class="forced-height">
+  <div class="container card-container pt-0" >
     <!--최신글-->
-    <div class="row newpost">
-      <div class=" col-sm-12 col-md-6 col-lg-4 mt-3" v-for="(item,index) in newPost" :key="index" >
+    <div class="row newpost" :class="{'bg-dark': modeCheck}">
+      <div class=" col-sm-12 col-md-6 col-lg-4 mt-3 "  v-for="(item,index) in newPost" :key="index" >
         <div class="card card-post card-shadow" :class="{'card-dark':modeCheck}" >
           <div class="card-body">
             <router-link :to="`/${item.link}/` " class="text-decoration-none text-dark" >
@@ -15,6 +16,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 <script>
 export default {
@@ -34,7 +36,6 @@ export default {
 <style>
   .card-container{
     padding:20px;
-    
   }
   .card-wrapper{
     margin: 10px; 

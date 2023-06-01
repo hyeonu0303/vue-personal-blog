@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5">
+  <div class="container mt-5 min-vh-100">
     <h5>{{ cssData[$route.params.css].title }}</h5>
     <div v-html="markedContent"></div>
     <p>{{ cssData[$route.params.css].date }}</p>

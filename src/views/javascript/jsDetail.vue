@@ -1,14 +1,21 @@
 <template>
-  <div class="container mt-5">
+  <div class="container mt-5 min-vh-100">
     <h5>{{ jsData[$route.params.js].title }}</h5>
     <div v-html="markedContent"></div>
     <p>{{ jsData[$route.params.js].date }}</p>
     <hr>
   </div>
+  <div>
+    <pre v-highlight><code class="javascript">
+      const message = 'Hello, World!';
+      console.log(message);
+    </code></pre>
+  </div>
 </template>
 
 <script>
 import {marked} from 'marked';
+
 export default {
   name:'detail',
   data(){
@@ -22,8 +29,9 @@ export default {
   computed:{
     markedContent() {
       return marked(this.jsData[this.$route.params.js].content);
-    }
-  }
+    },
+    
+  },
 }
 </script>
 

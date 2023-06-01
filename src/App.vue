@@ -1,11 +1,11 @@
 <template>
-  
+  <div :class="{'bg-dark':modeCheck,'text-white':modeCheck,}">
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar-fixed-top" :class="{'bg-dark':modeCheck,'text-white':modeCheck}">
   <div class="container-fluid">
     <router-link to="/" class="navbar-brand" style="font-weight: bold;" :class="{'text-white':modeCheck}">HY.blog</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon" ></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -54,6 +54,7 @@
     :count="count"
   >
   </router-view>
+</div>
 </template>
 <script>
 
@@ -90,10 +91,10 @@ export default {
   methods:{
     modeChange(){
       if(this.count % 2 == 1){
-        this.modeCheck = true;
+        this.modeCheck = true
       }
       else{
-        this.modeCheck = false;
+        this.modeCheck = false
       }
       this.count++;
     }
@@ -125,9 +126,7 @@ export default {
   font-size:30px;
 }
 
-.navbar{
-  z-index: 1000;
-}
+
 
 @font-face {
   font-family: 'Yeongdo-Rg';
