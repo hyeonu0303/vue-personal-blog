@@ -1,21 +1,12 @@
 <template>
-  <div class="container mt-5 min-vh-100">
+  <div class="container mt-5 min-vh-100" style="max-width:768px">
     <h5>{{ jsData[$route.params.js].title }}</h5>
-    <div v-html="markedContent"></div>
-    <p>{{ jsData[$route.params.js].date }}</p>
-    <hr>
-  </div>
-  <div>
-    <pre v-highlight><code class="javascript">
-      const message = 'Hello, World!';
-      console.log(message);
-    </code></pre>
+    <div v-html="$marked(this.jsData[this.$route.params.js].content)"></div>
+    <p style="text-align: right;">작성일:{{ jsData[$route.params.js].date }}</p>
   </div>
 </template>
 
 <script>
-import {marked} from 'marked';
-
 export default {
   name:'detail',
   data(){
@@ -26,12 +17,13 @@ export default {
   props:{
     jsData:Array,
   },
-  computed:{
-    markedContent() {
-      return marked(this.jsData[this.$route.params.js].content);
-    },
-    
-  },
+  mounted() {
+    // 마운트된 후에 Prism.js 적용
+    this.$nextTick(() => {
+      this.$Prism.highlightAll();
+    });
+  }  
+
 }
 </script>
 

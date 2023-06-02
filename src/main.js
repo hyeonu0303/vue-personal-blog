@@ -14,7 +14,7 @@ let emitter = mitt()
 //prismjs
 
 import Prism from 'prismjs';
-import 'prismjs/themes/prism.css';
+import 'prismjs/themes/prism-okaidia.css';
 
 
 //marked

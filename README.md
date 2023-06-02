@@ -5,7 +5,7 @@
 npm install
 npm i bootstrap@5.3.0
 npm install fontawesome
-npm install mitt
+npm install prismjs
 npm install marked
 ```
 

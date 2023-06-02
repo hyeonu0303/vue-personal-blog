@@ -1,7 +1,7 @@
 <template>
   <div :class="{'bg-dark':modeCheck,'text-white':modeCheck,}">
   <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-fixed-top" :class="{'bg-dark':modeCheck,'text-white':modeCheck}">
+  <nav class="navbar navbar-expand-lg" :class="{'bg-dark':modeCheck,'text-white':modeCheck}">
   <div class="container-fluid">
     <router-link to="/" class="navbar-brand" style="font-weight: bold;" :class="{'text-white':modeCheck}">HY.blog</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +18,6 @@
         <li class="nav-item">
           <router-link to="/" class="nav-link active" :class="{'text-white':modeCheck}">소개</router-link>
         </li>
-        
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" :class="{'text-white':modeCheck}">
             develope  
@@ -51,7 +50,6 @@
     :devData="devData"
     :cssData="cssData"
     :modeCheck="modeCheck"
-    :count="count"
   >
   </router-view>
 </div>
@@ -67,6 +65,9 @@ import devData from './assets/develope.js';
 import cssData from './assets/css.js';
 //이미지
 import homeImg from './image/homeImg.jpg';
+//코드블럭상단
+
+
 export default {
 
   name: 'App',
@@ -118,6 +119,7 @@ export default {
 
 <style>
 /*dropdown nav hover */
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -126,7 +128,22 @@ export default {
   font-size:30px;
 }
 
+::selection{
+  background:#96FFFF;
+  color:black;
+}
 
+blockquote{
+  padding:20px;
+  border-left: 10px solid #62a1ff;
+  background-color: rgb(226, 225, 225);
+  color:black;
+}
+
+blockquote p{
+  margin:0;
+  padding:0;
+}
 
 @font-face {
   font-family: 'Yeongdo-Rg';
@@ -134,5 +151,6 @@ export default {
   font-weight: normal;
   font-style: normal;
 }
+
 
 </style>

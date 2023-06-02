@@ -1,5 +1,5 @@
 <template>
-<div :class="{'bg-dark': modeCheck}" class="forced-height">
+<div :class="{'bg-dark': modeCheck}" class="min-vh-100">
   <div class="container card-container pt-0" >
     <!--최신글-->
     <div class="row newpost" :class="{'bg-dark': modeCheck}">
