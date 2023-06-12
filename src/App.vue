@@ -16,7 +16,7 @@
           <router-link to="/allPost" class="nav-link active" :class="{'text-white':modeCheck}">한눈에보기</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/" class="nav-link active" :class="{'text-white':modeCheck}">소개</router-link>
+          <router-link to="/introduce" class="nav-link active" :class="{'text-white':modeCheck}">소개</router-link>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" :class="{'text-white':modeCheck}">
@@ -67,9 +67,7 @@ import cssData from './assets/css.js';
 import homeImg from './image/homeImg.jpg';
 //코드블럭상단
 
-
 export default {
-
   name: 'App',
   data() {
     return {
@@ -85,9 +83,6 @@ export default {
   },
   components: {
     List,
-  },
-  conputed:{
-
   },
   methods:{
     modeChange(){
@@ -113,13 +108,12 @@ export default {
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
-  }, */
+  },  */
 }
 </script>
 
 <style>
 /*dropdown nav hover */
-
 .dropdown:hover .dropdown-menu {
   display: block;
 }
@@ -151,6 +145,4 @@ blockquote p{
   font-weight: normal;
   font-style: normal;
 }
-
-
 </style>

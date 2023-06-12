@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from './components/home.vue';
 import allPost from './components/allPost.vue';
+import introduce from './views/introduce.vue'
 import vueList from './views/vue/vueList.vue';
 import vueDetail from './views/vue/vueDetail.vue';
 import jsList from './views/javascript/jsList.vue';
@@ -9,8 +10,6 @@ import devList from './views/developeDay/devList.vue';
 import devDetail from './views/developeDay/devDetail.vue';
 import cssList from './views/CSS/cssList.vue';
 import cssDetail from './views/CSS/cssDetail.vue';
-//변수list -> 변수detail
-//
 
 const routes = [
   {
@@ -20,6 +19,10 @@ const routes = [
   {
     path: "/allPost",
     component: allPost,
+  },
+  {
+    path: "/introduce",
+    component: introduce
   },
   {
     path: "/jslist",
