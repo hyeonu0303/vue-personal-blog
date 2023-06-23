@@ -74,7 +74,7 @@
                     class="card-img-top" alt="개발일지아이콘" />
                 </div>
                 <div class="card-body p-0 mt-3">
-                  <p style="text-align:center; font-weight: bold;" :class="{'text-white':modeCheck}">NodeJs</p>
+                  <p style="text-align:center; font-weight: bold;" :class="{'text-white':modeCheck}">Node.js</p>
                 </div>
               </div>
             </router-link>

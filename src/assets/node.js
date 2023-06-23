@@ -4,7 +4,7 @@ export default[
   subtitle:'',
   content:'',
   date:'',
-  link:'',
+  link:'nodeetail/0',
 }, */
 {
   title:'node',
