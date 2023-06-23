@@ -1,9 +1,8 @@
 <template>
-  <div class="container mt-5">
+  <div class="container mt-5 min-vh-100" style="max-width:768px">
     <h5>{{ jsData[$route.params.js].title }}</h5>
-    <p style="white-space: pre-line">{{ jsData[$route.params.js].content }}</p>
-    <p>{{ jsData[$route.params.js].date }}</p>
-    <hr>
+    <div v-html="$marked(this.jsData[this.$route.params.js].content)"></div>
+    <p style="text-align: right;">작성일:{{ jsData[$route.params.js].date }}</p>
   </div>
 </template>
 
@@ -17,7 +16,14 @@ export default {
   },
   props:{
     jsData:Array,
-  }
+  },
+  mounted() {
+    // 마운트된 후에 Prism.js 적용
+    this.$nextTick(() => {
+      this.$Prism.highlightAll();
+    });
+  }  
+
 }
 </script>
 

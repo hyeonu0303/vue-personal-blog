@@ -1,8 +1,10 @@
 import vueData from './vueData.js';
 import jsData from './jsData.js';
 import develope from './develope.js';
+import cssData from './css.js';
 
-var allData = [...vueData, ...jsData,...develope];
+
+var allData = [...vueData, ...jsData,...develope,...cssData];
 
 allData = allData.sort((a, b) => {
   // 날짜 문자열을 'YYYY,MM.DD'에서 'YYYY-MM-DD' 형식으로 변환
@@ -11,8 +13,6 @@ allData = allData.sort((a, b) => {
   
   return dateB - dateA;  // 최신 날짜순으로 정렬
 });
-
-console.log(allData);
 export default allData;
 
 

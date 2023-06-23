@@ -1,33 +1,34 @@
 <template>
   <div class="container mt-5 min-vh-100" style="max-width:768px">
-    <h5>{{ devData[$route.params.dev].title }}</h5>
-    <div v-html="$marked(this.devData[this.$route.params.dev].content)"></div>
-    <p style="text-align: right;">작성일:{{ devData[$route.params.dev].date }}</p>
+    <h5>{{ nodeData[$route.params.node].title }}</h5>
+    <div v-html="$marked(this.nodeData[this.$route.params.node].content)"></div>
+    <p style="text-align: right;">작성일:{{ nodeData[$route.params.node].date }}</p>
   </div>
 </template>
 
 <script>
 export default {
-
   name:'detail',
   data(){
     return{
-        
+      
     }
   },
   props:{
-    devData:Array
+    nodeData:Array,
   },
-  
   mounted() {
     // 마운트된 후에 Prism.js 적용
     this.$nextTick(() => {
       this.$Prism.highlightAll();
     });
-  }
+  }  
+
 }
 </script>
 
 <style>
-  
+  img{
+    width:70%; height:auto;
+  }
 </style>

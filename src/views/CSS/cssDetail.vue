@@ -1,8 +1,8 @@
 <template>
   <div class="container mt-5 min-vh-100" style="max-width:768px">
-    <h5>{{ devData[$route.params.dev].title }}</h5>
-    <div v-html="$marked(this.devData[this.$route.params.dev].content)"></div>
-    <p style="text-align: right;">작성일:{{ devData[$route.params.dev].date }}</p>
+    <h5>{{ cssData[$route.params.css].title }}</h5>
+    <div v-html="$marked(this.cssData[this.$route.params.css].content)"></div>
+    <p style="text-align: right;">작성일:{{ cssData[$route.params.css].date }}</p>
   </div>
 </template>
 
@@ -16,9 +16,11 @@ export default {
     }
   },
   props:{
-    devData:Array
+    cssData:Array
   },
-  
+  components:{
+    
+  },
   mounted() {
     // 마운트된 후에 Prism.js 적용
     this.$nextTick(() => {
@@ -27,7 +29,6 @@ export default {
   }
 }
 </script>
-
 <style>
   
 </style>

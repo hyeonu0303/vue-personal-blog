@@ -1,24 +1,17 @@
 import { createWebHistory, createRouter } from "vue-router";
-
 import Home from './components/home.vue';
+import introduce from './views/introduce.vue';
 import allPost from './components/allPost.vue';
-<<<<<<< HEAD
-import vueList from './components/vue/vueList.vue';
-import vueDetail from './components/vue/vueDetail.vue';
-import jsList from './components/javascript/jsList.vue';
-import jsDetail from './components/javascript/jsDetail.vue';
-=======
 import vueList from './views/vue/vueList.vue';
 import vueDetail from './views/vue/vueDetail.vue';
 import jsList from './views/javascript/jsList.vue';
 import jsDetail from './views/javascript/jsDetail.vue';
 import devList from './views/developeDay/devList.vue';
 import devDetail from './views/developeDay/devDetail.vue';
-//변수list -> 변수detail
-//
-
->>>>>>> test
-
+import cssList from './views/CSS/cssList.vue';
+import cssDetail from './views/CSS/cssDetail.vue';
+import nodeList from './views/Nodejs/nodeList.vue';
+import nodeDetail from './views/Nodejs/nodeDetail.vue';
 const routes = [
   {
     path: "/",
@@ -27,6 +20,10 @@ const routes = [
   {
     path: "/allpost",
     component: allPost,
+  },
+  {
+    path: "/introduce",
+    component: introduce
   },
   {
     path: "/jslist",
@@ -42,12 +39,6 @@ const routes = [
     component: vueList 
   },
   {
-<<<<<<< HEAD
-    path: "/vuedetail/:vue(\\d+)",
-    component: vueDetail 
-  },
-  ]
-=======
     path:"/vuedetail/:vue",
     component:vueDetail,
   },
@@ -58,14 +49,29 @@ const routes = [
   {
     path:"/devdetail/:dev",
     component:devDetail
+  },
+  {
+    path:"/csslist",
+    component:cssList,
+  },
+  {
+    path:"/cssDetail/:css",
+    component:cssDetail
+  },
+  {
+    path:"/nodelist",
+    component:nodeList,
+  },
+  {
+    path:"/nodeDetail/:node",
+    component:nodeDetail
   }
 ]
->>>>>>> test
-
-
 const router = createRouter({
   history: createWebHistory(),
   routes,
 });
+
+
 
 export default router;
