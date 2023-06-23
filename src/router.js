@@ -10,7 +10,8 @@ import devList from './views/developeDay/devList.vue';
 import devDetail from './views/developeDay/devDetail.vue';
 import cssList from './views/CSS/cssList.vue';
 import cssDetail from './views/CSS/cssDetail.vue';
-
+import nodeList from './views/Nodejs/nodeList.vue';
+import nodeDetail from './views/Nodejs/nodeDetail.vue';
 const routes = [
   {
     path: "/",
@@ -57,6 +58,14 @@ const routes = [
   {
     path:"/cssDetail/:css",
     component:cssDetail
+  },
+  {
+    path:"/nodelist",
+    component:nodeList,
+  },
+  {
+    path:"/nodeDetail/:node",
+    component:nodeDetail
   }
 ]
 

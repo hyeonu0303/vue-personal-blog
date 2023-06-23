@@ -24,10 +24,11 @@ marked.setOptions({
   mangle: false, // mangle 경고 해제
   headerIds: false, // headerIds 경고 해제
 })
+window.Kakao.init("f02026299876b138bd856328e62d489e");
 // 전역 디렉티브 등록
 //marked
 const app=createApp(App)
-app.component('font-awesome-icon',FontAwesomeIcon) 
+app.component('font-awesome-icon',FontAwesomeIcon)  
 app.use(router)
 app.config.globalProperties.$Prism = Prism;
 app.config.globalProperties.$marked = marked;

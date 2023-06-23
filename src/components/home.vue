@@ -9,7 +9,7 @@
         <!--vue Icon-->
         <h2 class="mt-5" :class="{'text-white':modeCheck}">카테고리 <font-awesome-icon :icon="['fas', 'code']" style="color: #0048ff;"/></h2>
         <div class="row mt-3">
-          <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box">
+          <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box mb-3">
             <router-link to="/vuelist" class="text-decoration-none">
               <div class="card card-iconBox card-shadow" :class="{'card-dark':modeCheck}">
                 <div class="card-iconBox-inner mt-3">
@@ -23,7 +23,7 @@
               </div>
             </router-link>
           </div>
-          <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box">
+          <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box mb-3">
             <router-link to="/jslist" class="text-decoration-none">
               <div class="card card-iconBox card-shadow" :class="{'card-dark':modeCheck}">
                 <div class="card-iconBox-inner-js mt-3">
@@ -37,7 +37,7 @@
               </div>
             </router-link>
           </div>
-          <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box">
+          <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box mb-3">
             <router-link to="/csslist" class="text-decoration-none">
               <div class="card card-iconBox card-shadow " :class="{'card-dark':modeCheck}">
                 <div class="card-iconBox-inner-js mt-3">
@@ -51,7 +51,7 @@
             </div>
           </router-link>
           </div>
-          <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box">
+          <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box mb-3">
             <router-link to="/devlist" class="text-decoration-none">
               <div class="card card-iconBox card-shadow" :class="{'card-dark':modeCheck}">
                 <div class="card-iconBox-inner-js mt-3">
@@ -61,6 +61,20 @@
                 </div>
                 <div class="card-body p-0 mt-3">
                   <p style="text-align:center; font-weight: bold;" :class="{'text-white':modeCheck}">개발 일지</p>
+                </div>
+              </div>
+            </router-link>
+          </div>
+          <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box mb-3">
+            <router-link to="/nodelist" class="text-decoration-none">
+              <div class="card card-iconBox card-shadow" :class="{'card-dark':modeCheck}">
+                <div class="card-iconBox-inner-js mt-3">
+                  <img
+                    src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1634264836/noticon/uxvdxcyvs5ocrxhacfj6.png"
+                    class="card-img-top" alt="개발일지아이콘" />
+                </div>
+                <div class="card-body p-0 mt-3">
+                  <p style="text-align:center; font-weight: bold;" :class="{'text-white':modeCheck}">NodeJs</p>
                 </div>
               </div>
             </router-link>
