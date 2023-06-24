@@ -50,6 +50,7 @@
       :devData="devData"
       :cssData="cssData"
       :nodeData="nodeData"
+      :reactData="reactData"
       :modeCheck="modeCheck"
     >
     </router-view>
@@ -64,6 +65,7 @@ import jsData from './assets/jsData.js';
 import devData from './assets/develope.js';
 import cssData from './assets/css.js';
 import nodeData from './assets/node.js';
+import reactData from './assets/react.js';
 import homeImg from './image/homeImg.jpg';
 
 export default {
@@ -76,6 +78,7 @@ export default {
       devData: devData,
       cssData: cssData,
       nodeData: nodeData,
+      reactData: reactData,
       homeImg: homeImg,
       modeCheck: false,
       count: 0

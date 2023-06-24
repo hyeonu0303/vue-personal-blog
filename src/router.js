@@ -12,6 +12,8 @@ import cssList from './views/CSS/cssList.vue';
 import cssDetail from './views/CSS/cssDetail.vue';
 import nodeList from './views/Nodejs/nodeList.vue';
 import nodeDetail from './views/Nodejs/nodeDetail.vue';
+import reactList from './views/react/reactList.vue';
+import reactDetail from './views/react/reactDetail.vue';
 const routes = [
   {
     path: "/",
@@ -56,7 +58,7 @@ const routes = [
     component:cssList,
   },
   {
-    path:"/cssDetail/:css",
+    path:"/cssdetail/:css",
     component:cssDetail
   },
   {
@@ -64,8 +66,16 @@ const routes = [
     component:nodeList,
   },
   {
-    path:"/nodeDetail/:node",
+    path:"/nodedetail/:node",
     component:nodeDetail
+  },
+  {
+    path:"/reactlist",
+    component:reactList
+  },
+  {
+    path:"/reactdetail/:react",
+    component:reactDetail
   }
 ]
 

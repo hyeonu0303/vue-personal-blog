@@ -79,6 +79,20 @@
               </div>
             </router-link>
           </div>
+          <div class="col-sm-6 col-md-3 col-lg-3 card-sm-box mb-3">
+            <router-link to="/reactlist" class="text-decoration-none">
+              <div class="card card-iconBox card-shadow" :class="{'card-dark':modeCheck}">
+                <div class="card-iconBox-inner-js mt-3">
+                  <img
+                    src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566557331/noticon/d5hqar2idkoefh6fjtpu.png"
+                    class="card-img-top" alt="개발일지아이콘" />
+                </div>
+                <div class="card-body p-0 mt-3">
+                  <p style="text-align:center; font-weight: bold;" :class="{'text-white':modeCheck}">React</p>
+                </div>
+              </div>
+            </router-link>
+          </div>
         </div>
         <hr>
       </div>
