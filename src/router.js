@@ -18,7 +18,7 @@ const routes = [
     component: Home,
   },
   {
-    path: "/allPost",
+    path: "/allpost",
     component: allPost,
   },
   {
