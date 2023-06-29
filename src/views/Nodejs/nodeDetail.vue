@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-5 min-vh-100" style="max-width:768px">
-    <h5>{{ nodeData[$route.params.node].title }}</h5>
-    <div v-html="$marked(this.nodeData[this.$route.params.node].content)"></div>
+    <h1 style="text-align: center; margin-bottom: 50px;">{{ nodeData[$route.params.node].title }}</h1>
+    <div class="post-content" v-html="$marked(this.nodeData[this.$route.params.node].content)"></div>
     <p style="text-align: right;">작성일:{{ nodeData[$route.params.node].date }}</p>
   </div>
 </template>
@@ -30,5 +30,8 @@ export default {
 <style>
   img{
     width:70%; height:auto;
+  }
+  .post-content{
+    line-height: 2;
   }
 </style>
